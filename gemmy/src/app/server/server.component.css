@@ -1,0 +1,18 @@
+h2 {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+span {
+  font-size: inherit;
+}
+
+span.server_offline {
+  /* color: red; */
+  text-shadow: 2px 2px 1px rgb(189, 0, 0);
+}
+
+span.server_online {
+  /* color: #00ff40; */
+  text-shadow: 2px 2px 1px green;
+}

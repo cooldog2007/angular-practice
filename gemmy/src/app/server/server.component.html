@@ -1,0 +1,14 @@
+<h2>
+  server {{ serverId }} is
+  <!-- <span [class]="serverStatus == 'offline' ? 'server_offline' : 'server_online'"
+    >{{ serverStatus }}
+  </span> -->
+  <span
+    [ngStyle]="{ color: getColor() }"
+    [ngClass]="{
+      server_offline: serverStatus === 'offline',
+      server_online: serverStatus === 'online'
+    }"
+    >{{ serverStatus }}
+  </span>
+</h2>

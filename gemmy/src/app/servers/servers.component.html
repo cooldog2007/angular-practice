@@ -1,0 +1,35 @@
+<app-server *ngFor="let server of servers" />
+
+<div class="new-server-container">
+  <label for="serverName">server name</label>
+  <!-- <input type="text" id="serverName" (input)="updateServerName($event)" /> -->
+  <input type="text" id="serverName" [(ngModel)]="serverName" />
+  <button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+  >
+    add server
+  </button>
+</div>
+<p *ngIf="showServerCreationMessage === true">
+  Server was created! server name is {{ serverName }}
+</p>
+<!-- <ng-template #noServer>No server was created!</ng-template> -->
+<hr />
+<button class="btn btn-primary" (click)="onToggleDetails($event)">
+  show details
+</button>
+<p *ngIf="showDetails" class="details">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam vero earum,
+  qui maiores, veniam aperiam delectus tempore fugit provident temporibus
+  consequatur similique enim impedit cupiditate dolore dolorum! Exercitationem,
+  illum quisquam.
+</p>
+<p
+  *ngFor="let tstamp of timestamps; let i = index"
+  [ngStyle]="{ backgroundColor: i > 5 && 'navy' }"
+  [ngClass]="i > 5 ? 'whitey' : ''"
+>
+  {{ tstamp.msg }}
+</p>
