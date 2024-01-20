@@ -1,0 +1,26 @@
+<div class="container">
+  <app-cockpit (srCreated)="addServer($event)" />
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-danger" (click)="destroy1stServer()">
+        destroy 1st sёrvar
+      </button>
+      <app-server-element
+        *ngFor="let element of serverElements; let i = index"
+        [srvElement]="element"
+        [srvName]="element.name"
+      >
+        <button *ngIf="i === 0" class="btn" (click)="onChangeName()">
+          change name
+        </button>
+        <p #serverParagraph>
+          <strong *ngIf="element.type === 'server'" style="color: red">{{
+            element.content
+          }}</strong>
+          <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+        </p>
+      </app-server-element>
+    </div>
+  </div>
+</div>

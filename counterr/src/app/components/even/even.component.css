@@ -1,0 +1,15 @@
+p {
+  margin: 1rem 1rem;
+
+  font-size: 2rem;
+}
+h2 {
+  font-size: 3rem;
+}
+.container {
+  /* margin-left: 25rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&family=UnifrakturCook:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  font-size: 12.5px;
+}
+
+body {
+  background-color: rgb(24, 20, 23);
+  /* font-family: "Rubik Broken Fax", system-ui; */
+  font-family: "UnifrakturCook", cursive;
+  color: #00ff40;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+/* div.alert-container h2 {
+  margin: 0 auto;
+} */
