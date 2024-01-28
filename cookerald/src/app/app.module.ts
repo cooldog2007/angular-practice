@@ -11,6 +11,12 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
 import { ShoppingEditComponent } from './components/shopping-list/shopping-edit/shopping-edit.component';
 import { RecipeItemComponent } from './components/recipes/recipe-list/recipe-item/recipe-item.component';
 import { IngredientComponent } from './components/shared/ingredient/ingredient.component';
+import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './directives/unless/unless.directive';
+import { DropdownDirective } from './directives/dropdown/dropdown.directive';
+import { RecipesService } from './services/recipes.service';
+import { ShoppingListService } from './services/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +29,13 @@ import { IngredientComponent } from './components/shared/ingredient/ingredient.c
     ShoppingEditComponent,
     RecipeItemComponent,
     IngredientComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective,
+    DropdownDirective,
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [RecipesService, ShoppingListService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

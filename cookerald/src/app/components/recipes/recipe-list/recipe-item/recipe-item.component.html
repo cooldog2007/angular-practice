@@ -1,1 +1,19 @@
-<p>recipe-item!</p>
+<a
+  href="#"
+  class="list-group-item clearfix"
+  (click)="onRecipeClick()"
+  *ngIf="recipe"
+>
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <div class="pull-right">
+    <img
+      class="img-responsive"
+      style="width: 50px; max-height: 50px; object-fit: cover"
+      src="{{ recipe.image }}"
+      alt="smeed"
+    />
+  </div>
+</a>

@@ -6,17 +6,21 @@
 
     <div class="collapse navbar-collapse inline-block">
       <ul class="nav navbar-nav">
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">Shopping list</a></li>
+        <li [ngClass]="{ active: currentView === 'recipes' }">
+          <a href="#" (click)="setView('recipes')">Recipes</a>
+        </li>
+        <li [ngClass]="{ active: currentView === 'shoppingList' }">
+          <a href="#" (click)="setView('shoppingList')">Shopping list</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
+        <li class="dropdown" appDropdown>
           <a href="#" class="dropdown-toggle" role="button"
             >Manage <span class="caret"></span
           ></a>
           <ul class="dropdown-menu">
             <li><a href="#">Save data</a></li>
-            <li><a href="#">fetch data</a></li>
+            <li><a href="#">Fetch data</a></li>
           </ul>
         </li>
       </ul>
